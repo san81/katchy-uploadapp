@@ -14,6 +14,6 @@ create table link(
 userid integer,
 hospitalid integer,
 primary key(userid,hospitalid),
-foreign key(userid) references users(sno),
-foreign key(hospitalid) references users(sno)
+foreign key(userid) references users(sno) on delete cascade,
+foreign key(hospitalid) references users(sno) on delete cascade
 )engine=InnoDB;

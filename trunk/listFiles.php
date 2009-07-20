@@ -23,7 +23,8 @@ if(!file_exists($target_path)){
 					echo "[$file]<br>";
 				 } else {
 					// found an ordinary file
-					echo "<a href='getSelectedFile.php?fileName=$file&hospitalName=$hospitalName'>$file</a><br>";
+					//$lastAccessTime = date("F d Y H:i:s.", filectime($file));
+					echo "<a href='getSelectedFile.php?fileName=$file&hospitalName=$hospitalName'>$file</a>&nbsp;&nbsp;<br>";
 				 }
 			  }
 		   }
