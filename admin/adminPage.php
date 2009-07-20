@@ -10,7 +10,7 @@ if($username=='Admin' && $password=='Sreenivas')
 <html>
 	<head>	
 		<title>Katchy Login</title>
-	
+		
 		<script language="JavaScript" type="text/javascript" src="../scripts/adminjs.js"></script>
 		<script language="JavaScript" type="text/javascript" src="../scripts/zxml.js"></script>
 		<script language="JavaScript" type="text/javascript" src="../scripts/sendRequest.js"></script>
@@ -23,8 +23,10 @@ if($username=='Admin' && $password=='Sreenivas')
 			<tr height=70%>
 				<td width=20%>
 					<ul>
-						<li><a href="#" onClick="createUserForm()"> CreateUser</a></li>
+						<li><a href="#" onClick="createUserForm()"> Create User</a></li>						
 						<li><a href="#" onClick="createHospitalForm()"> Create Hospital</a></li>
+						<li><a href="#" onClick="viewUsers()"> View User</a></li>
+						<li><a href="#" onClick="viewHospitals()"> View Hospitals</a></li>						
 						<li><a  href="#" onClick="associate()"> Associate</a></li>
 						<li><a  href="../logout.php"> Logout</a></li>
 					<ul>

@@ -3,8 +3,11 @@ session_start();
 include('connect.php');
 if(!isset($_SESSION['userInSession'])) die('user not logged in');
 
-$username=$_SESSION['userInSession'];
-
+if(!isset($_GET['user']))
+	$username=$_SESSION['userInSession'];
+else
+	$username=$_GET['user'];
+	
 $query = "select * from hospitals where sno in (select hospitalid from link where userid=(select sno from users where username='$username'))";
 $result_set_obj = mysql_query($query);
 $result_set = mysql_fetch_array($result_set_obj);
