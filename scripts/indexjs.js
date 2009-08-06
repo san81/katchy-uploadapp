@@ -35,4 +35,7 @@ function listFiles(hospital){
 	sendGetRequest('listFiles.php?hospitalName='+hospital,'fileList','');
 }
 
+function viewHospitalFilesList(){
+	sendGetRequest('viewHospitalUserFiles.php','loginDiv','');	
+}
 //-->
