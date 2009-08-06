@@ -19,6 +19,7 @@ if(!isset($_SESSION['userInSession'])) die('usernot logged in');
 				<td width=20%>
 					<ul>
 						<li><a href="hospitalUser.php"> Upload Files</a></li>						
+						<li><a href="#" onClick="viewHospitalFilesList()"> View Files List</a></li>
 						<li><a href="logout.php"> Logout</a></li>
 					<ul>
 				</td>
