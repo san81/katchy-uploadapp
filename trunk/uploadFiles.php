@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['userInSession'])) die('usernot logged in');
+
+include('connect.php');
+
 $fileToUpload_name = $_FILES['fileToUpload']['tmp_name'];
 $target_path = "alluploads/".$_SESSION['userInSession']."/";
 if(!file_exists($target_path)){
@@ -14,4 +18,8 @@ if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_path)) {
 } else{
     echo "There was an error uploading the file, please try again, or contact Mr. Sreenivas for clarifications. Email: Sreeni@katchymedia.com!";
 }
+$query = "insert into documents (hospital_id,document_name) values (".$_SESSION['userIDInSession'].",'".$_FILES['fileToUpload']['name']."') ";
+echo $query;
+mysql_query($query);
+mysql_close();
 ?>
