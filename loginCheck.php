@@ -13,6 +13,7 @@ if(mysql_num_rows($result_set_obj)==0){
 		$result_set = mysql_fetch_array($result_set_obj);
 		if($result_set['password']==$password){
 			$_SESSION['userInSession']=$result_set['username'];
+			$_SESSION['userIDInSession']=$result_set['sno'];
 			echo $result_set['usertype'];
 		}
 	}
