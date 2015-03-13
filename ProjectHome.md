@@ -1,0 +1,5 @@
+-> creates users
+-> creates uploading users ( in this case hospitals )
+-> associates users to hospitals
+-> hospital user uploads files
+-> regular user dowloads files from the associated hospitals
